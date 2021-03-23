@@ -1,10 +1,12 @@
 <template>
-  <o-layout />
+  <div>
+    <date-time></date-time>
+  </div>
 </template>
 
 <script setup>
 // comp
-import OLayout from '@/components/base/o-layout/index.vue'
+import DateTime from '@/components/business/date-time/index.vue'
 
 </script>
 
