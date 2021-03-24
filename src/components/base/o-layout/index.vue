@@ -7,6 +7,11 @@
 <script setup>
 // comp
 import DateTime from '@/components/business/date-time/index.vue'
+
+function initTheme() {
+  window.document.documentElement.setAttribute('theme', '')
+}
+
 </script>
 
 <style lang="scss" rel="stylesheet/scss" type="text/scss" scoped>
