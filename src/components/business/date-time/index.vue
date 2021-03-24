@@ -6,10 +6,14 @@
 <script setup>
 // util
 import * as timeUtil from '@/util/time.js'
+// css
+import css from '@/styles/attrs.module.scss'
+
 import { reactive, computed } from 'vue'
 
 const state = reactive({
-  now: new Date()
+  now: new Date(),
+  theme: '',
 })
 
 const year = computed(() => {
@@ -41,4 +45,7 @@ function setTime() {
 }
 </script>
 
-<style lang="scss" rel="stylesheet/scss" type="text/scss" scoped></style>
+<style lang="scss" rel="stylesheet/scss" type="text/scss" scoped>
+
+
+</style>
