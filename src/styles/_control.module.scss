@@ -1,0 +1,26 @@
+@import './themes.module.scss';
+
+//遍历主题map
+@mixin theme-select {
+	@each $theme-name, $theme-map in $themes {
+		//!global 把局部变量强升为全局变量
+		$theme-map: $theme-map !global;
+		//判断html的data-theme的属性值  #{}是sass的插值表达式
+		//& sass嵌套里的父容器标识   @content是混合器插槽，像vue的slot
+		[theme='#{$theme-name}'] & {
+			@content;
+		}
+	}
+}
+
+//声明一个根据Key获取颜色的function
+@function get-color($key) {
+	@return map-get($theme-map, $key);
+}
+
+//获取背景颜色
+@mixin background_color($color) {
+	@include theme-select {
+		background-color: get-color($color) !important;
+	}
+}

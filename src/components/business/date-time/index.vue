@@ -4,10 +4,7 @@
 </template>
 
 <script setup>
-// css
-import css from '@/styles/attrs.module.scss'
-
-import { reactive, computed, getCurrentInstance } from 'vue'
+import { reactive, computed, inject } from 'vue'
 
 const state = reactive({
   now: new Date(),
@@ -35,12 +32,9 @@ const seconds = computed(() => {
 
 setTime()
 
-const ctx = getCurrentInstance()
-
 function setTime() {
   setInterval(() => {
     let nowTime = new Date()
-    let test = $time
     state.now = nowTime
   }, 1000)
 }

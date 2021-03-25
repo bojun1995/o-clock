@@ -1,7 +1,7 @@
-import { createApp } from 'vue'
-import App from '@/App.vue'
-
 import time from './time'
+import * as theme from './theme'
 
-const app = createApp(App)
-app.config.globalProperties.$time = time
+export default {
+  time: time,
+  theme: theme
+}

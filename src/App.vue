@@ -5,6 +5,12 @@
 <script setup>
 // comp
 import OLayout from '@/components/base/o-layout/index.vue'
+import { provide } from 'vue'
+// global util
+import util from '@/util/install'
+provide('$util', util)
+// init theme
+util.theme.setTheme()
 
 </script>
 

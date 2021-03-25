@@ -6,3 +6,7 @@
 export function setTheme(themeName = 'light') {
   window.document.documentElement.setAttribute('theme', themeName)
 }
+
+export function getTheme() {
+  return window.document.documentElement.getAttribute('theme')
+}
