@@ -1,6 +1,8 @@
 <template>
-  <div>{{year}}年{{month}}月{{date}}日</div>
-  <div>{{hours}}时{{minutes}}分{{seconds}}秒</div>
+  <div class="clock_container">
+    <div>{{year}}年{{month}}月{{date}}日</div>
+    <div>{{hours}}时{{minutes}}分{{seconds}}秒</div>
+  </div>
 </template>
 
 <script setup>
@@ -30,9 +32,9 @@ const seconds = computed(() => {
   return state.now.getSeconds()
 })
 
-setTime()
+getTime()
 
-function setTime() {
+function getTime() {
   setInterval(() => {
     let nowTime = new Date()
     state.now = nowTime
@@ -41,4 +43,9 @@ function setTime() {
 </script>
 
 <style lang="scss" rel="stylesheet/scss" type="text/scss" scoped>
+.clock_container {
+  width: 1200px;
+  height: 500px;
+  background-color: rgb(47, 47, 63);
+}
 </style>

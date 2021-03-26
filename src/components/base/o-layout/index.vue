@@ -13,6 +13,7 @@ import OClock from '@/views/o-clock/index.vue'
 @import '@/styles/_control.module.scss';
 
 .layout-container {
+  height: 100%;
   @include background_color('background-color_0');
   @include color('color_0');
 }

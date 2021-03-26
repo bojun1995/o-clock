@@ -1,11 +1,16 @@
+html,
 body {
-  margin: 0px;
+	height: 100%;
+}
+
+body {
+	margin: 0px;
 }
 
 div {
-  transition: background-color 0.7s;
+	transition: background-color 0.7s;
 }
 
 a {
-  transition: color 0.2s;
+	transition: color 0.2s;
 }

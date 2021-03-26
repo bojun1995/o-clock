@@ -14,5 +14,8 @@ util.theme.setTheme()
 
 </script>
 
-<style lang="scss" rel="stylesheet/scss" type="text/scss" scoped>
+<style lang="scss" rel="stylesheet/scss" type="text/scss">
+#app {
+  height: 100%;
+}
 </style>

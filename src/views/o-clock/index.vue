@@ -1,9 +1,13 @@
 <template>
-  <date-time></date-time>
+  <div class="page_container">
+    <div class="clock_row">
+      <clock></clock>
+    </div>
+  </div>
 </template>
 
 <script setup>
-import DateTime from '@/components/business/date-time/index.vue'
+import Clock from '@/components/business/clock/index.vue'
 import { reactive, inject } from 'vue'
 
 
@@ -17,4 +21,13 @@ function onThemeChange(theme) {
 </script>
 
 <style lang="scss" rel="stylesheet/scss" type="text/scss" scoped>
+.page_container {
+  display: flex;
+}
+.clock_row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10%;
+}
 </style>
