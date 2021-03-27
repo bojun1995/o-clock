@@ -1,5 +1,9 @@
 <template>
   <div class="page_container">
+    <div>
+      <button @click="onThemeChange('light')">light</button>
+      <button @click="onThemeChange('dark')">dark</button>
+    </div>
     <div class="clock_row">
       <clock></clock>
     </div>
@@ -23,6 +27,7 @@ function onThemeChange(theme) {
 <style lang="scss" rel="stylesheet/scss" type="text/scss" scoped>
 .page_container {
   display: flex;
+  flex-direction: column;
 }
 .clock_row {
   display: flex;

@@ -1,12 +1,12 @@
 <template>
   <div class="layout-container">
-    <o-clock></o-clock>
+    <o-clock-page></o-clock-page>
   </div>
 </template>
 
 <script setup>
 // comp
-import OClock from '@/views/o-clock/index.vue'
+import OClockPage from '@/views/o-clock-page/index.vue'
 </script>
 
 <style lang="scss" rel="stylesheet/scss" type="text/scss" scoped>
