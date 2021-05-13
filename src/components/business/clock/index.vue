@@ -13,28 +13,28 @@ const state = reactive({
   theme: '',
 })
 
-const year = computed(() => {
+let year = computed(() => {
   return state.now.getFullYear()
 })
-const month = computed(() => {
+let month = computed(() => {
   return state.now.getMonth()
 })
-const date = computed(() => {
+let date = computed(() => {
   return state.now.getDate()
 })
-const hours = computed(() => {
+let hours = computed(() => {
   return state.now.getHours()
 })
-const minutes = computed(() => {
+let minutes = computed(() => {
   return state.now.getMinutes()
 })
-const seconds = computed(() => {
+let seconds = computed(() => {
   return state.now.getSeconds()
 })
 
-getTime()
+refreshTime()
 
-function getTime() {
+function refreshTime() {
   setInterval(() => {
     let nowTime = new Date()
     state.now = nowTime
@@ -43,9 +43,15 @@ function getTime() {
 </script>
 
 <style lang="scss" rel="stylesheet/scss" type="text/scss" scoped>
+$clock_height: 45vh;
+$clock_width: calc(#{$clock_height} * 2);
+
 .clock_container {
-  width: 1200px;
-  height: 500px;
-  background-color: rgb(47, 47, 63);
+  height: $clock_height;
+  width: $clock_width;
+  background-color: rgba(47, 47, 63, 0.548);
+
+  display: flex;
+  flex-direction: row;
 }
 </style>

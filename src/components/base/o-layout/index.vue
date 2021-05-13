@@ -10,11 +10,9 @@ import OClockPage from '@/views/o-clock-page/index.vue'
 </script>
 
 <style lang="scss" rel="stylesheet/scss" type="text/scss" scoped>
-@import '@/styles/_control.module.scss';
-
 .layout-container {
   height: 100%;
-  @include background_color('background-color_0');
-  @include color('color_0');
+  display: flex;
+  flex-direction: column;
 }
 </style>

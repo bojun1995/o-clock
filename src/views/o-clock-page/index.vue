@@ -4,7 +4,7 @@
       <button @click="onThemeChange('light')">light</button>
       <button @click="onThemeChange('dark')">dark</button>
     </div>
-    <div class="clock_row">
+    <div class="_clock">
       <clock></clock>
     </div>
   </div>
@@ -25,14 +25,20 @@ function onThemeChange(theme) {
 </script>
 
 <style lang="scss" rel="stylesheet/scss" type="text/scss" scoped>
+@import '@/styles/_control.module.scss';
+
 .page_container {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
+
+  @include background_color('background-color_0');
+  @include color('color_0');
 }
-.clock_row {
+._clock {
   display: flex;
+  flex-grow: 1;
   justify-content: center;
-  width: 100%;
-  margin-top: 10%;
+  align-items: center;
 }
 </style>
